@@ -7,16 +7,28 @@ export default {
     },
     data(){
         return{
-            esta_trabalhando: false,
+            esta_trabalhando: true,
+            teste:false,
+            status:'',
+            classStatus:'',
             meu_link: 'https://github.com/wemmersonalb'
 
+        }
+    },
+    created(){
+        if(this.teste){
+            this.status = 'Operante'
+            this.classStatus = 'green'
+        }else{
+            this.status = 'Inoperante'
+            this.classStatus = 'red'
         }
     }
 }
 </script>
 <template>
     <div>
-        <p v-show="esta_trabalhando">TRABALHANDO</p>
+        <p :class="classStatus">{{status}}</p>
         <p>Linguagens de programação que sei utilizar:</p>
         <ul>
             <li>Java</li>
@@ -29,3 +41,11 @@ export default {
         <Picture />
     </div>
 </template>
+<style>
+    .red{
+        color: red;
+    }
+    .blue{
+        color: blue;
+    }
+</style>

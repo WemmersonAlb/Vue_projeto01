@@ -1,23 +1,35 @@
 <script>
 import LifeCycle from './components/LifeCycle.vue'
-import PessoaVue from './components/Pessoa.vue'
 import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import Pessoa from './components/Pessoa.vue'
+import Picture from './components/Picture.vue'
 
 export default {
   name: 'App',
   components: {
     PrimeiroComponente,
     LifeCycle,
-    Pessoa
+    Pessoa,
+    Picture
   }
 }
 </script>
 
 <template>
   <div>
-    <PrimeiroComponente />
-    <LifeCycle />
+    <div class="foto-texto">
+      <Picture class="picture"/>
+      <PrimeiroComponente />
+    </div>
     <Pessoa />
   </div>
 </template>
+<style>
+  .foto-texto{
+    display: flex;
+    flex-direction: row;
+  }
+  .picture{
+    margin-right: 10px;
+  }
+</style>

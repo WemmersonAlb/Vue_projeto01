@@ -3,6 +3,7 @@ import LifeCycle from './components/LifeCycle.vue'
 import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import Pessoa from './components/Pessoa.vue'
 import Picture from './components/Picture.vue'
+import Formulario from './components/Formulario.vue'
 
 export default {
   name: 'App',
@@ -10,26 +11,31 @@ export default {
     PrimeiroComponente,
     LifeCycle,
     Pessoa,
-    Picture
+    Picture,
+    Formulario
   }
 }
 </script>
 
 <template>
-  <div>
+  <div class="div-mae">
     <div class="foto-texto">
       <Picture class="picture"/>
       <PrimeiroComponente />
     </div>
     <Pessoa />
+    <Formulario />
   </div>
 </template>
-<style>
+<style scoped>
   .foto-texto{
     display: flex;
     flex-direction: row;
   }
   .picture{
     margin-right: 10px;
+  }
+  .div-mae{
+    padding:100px 0;
   }
 </style>

@@ -1,6 +1,9 @@
 <script>
 export default {
     name: 'Info',
+    props: {
+        user: Object
+    },
     data(){
         return{
             esta_trabalhando: true,
@@ -74,7 +77,11 @@ export default {
             <span v-if="mostrar_email" >{{meu_email}}</span>
             <span v-else class="spanSizeEmail">##############@######.###</span>
             <img @click="showEmail" :src="caminhoImgEmail"  :alt="descricaoImgEmail" class="botaoEmail"/>
-        </div>        
+        </div>     
+        <div>
+            <h3>{{user.nome}}</h3>
+            <h4>{{user.email}}</h4>
+        </div>   
         
     </div>
 </template>

@@ -4,6 +4,7 @@ import PrimeiroComponente from './components/PrimeiroComponente.vue'
 import Pessoa from './components/Pessoa.vue'
 import Picture from './components/Picture.vue'
 import Formulario from './components/Formulario.vue'
+import MultiplosEventos from './components/MultiplosEventos.vue'
 
 export default {
   name: 'App',
@@ -12,7 +13,8 @@ export default {
     LifeCycle,
     Pessoa,
     Picture,
-    Formulario
+    Formulario,
+    MultiplosEventos
   }
 }
 </script>
@@ -25,6 +27,7 @@ export default {
     </div>
     <Pessoa />
     <Formulario />
+    <MultiplosEventos />
   </div>
 </template>
 <style scoped>

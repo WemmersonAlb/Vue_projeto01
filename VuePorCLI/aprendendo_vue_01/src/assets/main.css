@@ -10,6 +10,12 @@ body{
   padding: 2rem;
   font-weight: normal;
 }
+button:hover{
+  background-color: rgb(27, 27, 27);
+}
+button:active{
+  background-color: rgb(58, 58, 58);
+}
 
 a,
 .green {
